@@ -2,11 +2,29 @@
 //
 
 #include <iostream>
+using namespace std;
+
+namespace mann
+{
+    void print()
+    {
+
+    }
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    std::cout << "Git\n";
+    mann::print();
+
+    cout << "Hello World!\n";
+    cout << "Git\n";
+
+    int age = -1;
+
+    cin >> age;
+    cout << "Age = " << age << endl;
+
+    printf("Hello!");
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
