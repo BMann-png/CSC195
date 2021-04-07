@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0953025e-6a82-4c2e-bf01-8205975f770c}</ProjectGuid>
-    <RootNamespace>UserDataTypes</RootNamespace>
+    <ProjectGuid>{a8e2f706-2a26-4c07-b859-e7899a76ce92}</ProjectGuid>
+    <RootNamespace>MannBUserDataTypes</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,11 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Sandwich.cpp" />
-    <ClCompile Include="UserDataTypes.cpp" />
+    <ClCompile Include="Employee.cpp" />
+    <ClCompile Include="MannB_UserDataTypes.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Sandiwich.h" />
+    <ClInclude Include="Employee.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,8 +1,26 @@
 // UserDataTypes.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#include "Sandwich.cpp"
 #include <iostream>
 
+
+//This is essentially a find and replace
+#define SHOP_NAME = "Cheese"
+#define XBOX
+
+
+void ifdefEx() {
+#ifdef XBOX
+    std::cout << "xbox\n";
+#endif
+
+
+    //This will automatically be included if in Debug mode vs Release mode
+#ifdef _DEBUG
+    std::cout << "debug\n";
+#endif
+}
 
     //user-defined data types: class, structure, union, and enumerations.
 
@@ -64,6 +82,7 @@ public:
 };
 
 
+
 //an enum essentially gives names to numbers
 enum Seasons
 {
@@ -73,9 +92,25 @@ enum Seasons
     Fall //This corresponds to 3
 };
 
+//you can give enums a "scope"
+enum class Difficulty
+{
+    Easy,
+    Medium,
+    Hard
+};
+
+//Currency is now essentially a float;
+//typedef float currency;
+
+//but this creates a line of code where one single word can be changed to change a data type
+typedef double currency;
+
 
 int main()
 {
+    //currency balance;
+
 
     Sandwich sand;
     sand.price = 4.99f;
@@ -121,4 +156,8 @@ int main()
 
     //This will tell you the size, with some padding, of the class
     std::cout << sizeof(sand) << "\n";
+
+    Difficulty difficulty = Difficulty::Hard;
+
+
 }
