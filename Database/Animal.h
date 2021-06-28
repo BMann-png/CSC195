@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 
 class Animal
 {
@@ -21,6 +22,12 @@ public:
 
 	friend std::istream& operator >> (std::istream& istream, Animal& animal);
 	friend std::ostream& operator << (std::ostream& ostream, Animal& animal);
+
+	friend std::ifstream& operator >> (std::ifstream& istream, Animal& animal);
+	friend std::ofstream& operator << (std::ofstream& ostream, Animal& animal);
+
+	friend bool operator == (const std::unique_ptr<Animal>& animal, const std::string& name) { return animal->Getname() == name; }
+	friend bool operator == (const std::unique_ptr<Animal>& animal, eType type) { return animal->GetType() == type; }
 
 
 protected:

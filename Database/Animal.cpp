@@ -43,3 +43,17 @@ std::istream& operator>>(std::istream& istream, Animal& animal)
 
 	return istream;
 }
+
+std::ifstream& operator >> (std::ifstream& istream, Animal& animal)
+{
+	animal.Read(istream);
+	return istream;
+}
+
+std::ofstream& operator << (std::ofstream& ostream, Animal& animal)
+{
+	animal.Write(ostream);
+
+	return ostream;
+}
+
